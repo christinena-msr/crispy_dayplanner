@@ -54,10 +54,31 @@ function emptyCalendar (hr) {
     display.appendChild(timeBlock);
 }
 
-// var saveBtn = document.getElementsByClassName("saveBtn");
-// var userInput = document.getElementsByClassName("textarea");
-// saveBtn.addEventListener("click", function() {
-//     var saveData = userInput.value;
+var saveBtn = document.getElementsByClassName("saveBtn");
+var userInput = document.getElementsByClassName("textarea");
+var hourData = document.getElementsByClassName("hour");
+var user = new Array(saveBtn.length);
+for (let i=0; i<saveBtn.length; i++) {
+    saveBtn[i].addEventListener("click", function() {
+        console.log(this);
+        var saveData = {
+            hour: hourData[i].textContent,
+            todoItem: userInput[i].value
+        };
+        user[i] = (saveData);
+        console.log(saveData);
+        console.log(user);
+    });    
+}
+localStorage.setItem("user", JSON.stringify(user));
+var previousData = JSON.parse(localStorage.getItem("user"));
+console.log(previousData);
+for (let i=0; i<saveBtn.length; i++) {
+    if(user[i] != null) {
+        hourData[i].textContent = user[i].saveData.hour;
+        userInput[i].value = user[i].saveData.todoItem;
+    }
+    break;
+}
 
-// })
 
