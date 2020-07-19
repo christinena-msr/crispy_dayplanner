@@ -16,6 +16,9 @@ Features include:
 
 This website is a simple calendar application that allows you to save events for each hour of the day.
 
+### Design
+![Website Front Page](/assets/frontpage_1.png)
+
 Technologies: 
 * Moment.js
 * Bootstrap
