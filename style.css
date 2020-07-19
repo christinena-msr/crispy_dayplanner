@@ -40,6 +40,12 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  border-left: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
+  /* attempt to center time in the middle of div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .past {
