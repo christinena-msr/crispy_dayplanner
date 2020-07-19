@@ -4,6 +4,7 @@ var date = moment().format("dddd, MMMM Do")
 today.textContent = date; // current date 
 console.log(date);
 var currentHour = moment().format("hA");
+
 // var currentHour = 12;
 console.log(currentHour);
 var startHour = 9;
